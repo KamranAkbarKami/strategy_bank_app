@@ -9,7 +9,7 @@ import 'package:strategy_bank_app/screens/home/strategies/view/strategies_view.d
 import 'package:strategy_bank_app/screens/home/user_account/view/user_account_view.dart';
 import 'package:strategy_bank_app/utils/colors/colors.dart';
 
-import '../utils/gen/assets.gen.dart';
+import '../gen/assets.gen.dart';
 import '../utils/text_styles/textstyles.dart';
 
 class CustomBottomAppBar extends StatelessWidget {
@@ -38,7 +38,7 @@ class CustomBottomAppBar extends StatelessWidget {
                 itemIndex: 0,
                 selectedIndex: selectedIndex,
                 text: "Home",
-                assetName: Assets.assets.icons.home,
+                assetName: Assets.bottomAppBarSvgImages.homeIcon,
                 onTapFunction: () {
                   Get.offAll(() => HomePageView(),
                       transition: Transition.fadeIn);
@@ -47,7 +47,7 @@ class CustomBottomAppBar extends StatelessWidget {
                 itemIndex: 1,
                 selectedIndex: selectedIndex,
                 text: "Strategies",
-                assetName: Assets.assets.icons.strategies,
+                assetName: Assets.bottomAppBarSvgImages.strategies,
                 onTapFunction: () {
                   Get.offAll(() => StrategiesView(),
                       transition: Transition.fadeIn);
@@ -56,7 +56,7 @@ class CustomBottomAppBar extends StatelessWidget {
                 itemIndex: 2,
                 selectedIndex: selectedIndex,
                 text: "Favourites",
-                assetName: Assets.assets.icons.favourites,
+                assetName: Assets.bottomAppBarSvgImages.favouritesIcon,
                 onTapFunction: () {
                   Get.offAll(() => FavouritesView(),
                       transition: Transition.fadeIn);
@@ -65,7 +65,7 @@ class CustomBottomAppBar extends StatelessWidget {
                 itemIndex: 3,
                 selectedIndex: selectedIndex,
                 text: "Account",
-                assetName: Assets.assets.icons.account,
+                assetName: Assets.bottomAppBarSvgImages.accountIcon,
                 onTapFunction: () {
                   Get.offAll(() => UserAccountView(),
                       transition: Transition.fadeIn);
@@ -98,6 +98,7 @@ class CustomBottomAppBarComponent extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         height: 70,
+        width: 55,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
