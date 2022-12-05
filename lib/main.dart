@@ -1,11 +1,9 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:strategy_bank_app/bindings/initializing_dependencies.dart';
+import 'package:strategy_bank_app/screens/auth/login/sign_in/view/sign_in_view.dart';
 import 'package:strategy_bank_app/screens/auth/on_boarding/view/on_boarding_screen.dart';
-import 'package:strategy_bank_app/screens/home/home_page/view/home_page_view.dart';
 import 'package:strategy_bank_app/utils/colors/colors.dart';
 
 main() async {
@@ -23,9 +21,11 @@ class StrategyBankApp extends StatelessWidget {
       title: 'Strategy Bank Application',
       debugShowCheckedModeBanner: false,
       initialBinding: InitializingDependency(),
-      theme: ThemeData(scaffoldBackgroundColor: cWhiteColor),
-      home: OnBoardingScreen(),
-      // home: HomePageView(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: cWhiteColor,
+      ),
+      // home: const OnBoardingScreen(),
+      home: const SignInView(),
     );
   }
 }

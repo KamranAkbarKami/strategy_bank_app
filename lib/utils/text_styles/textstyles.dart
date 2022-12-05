@@ -23,3 +23,88 @@ TextStyle buttonTextStyle = TextStyle(
   fontSize: 16,
   color: cWhiteColor,
 );
+TextStyle formTextStyle = TextStyle(
+    fontFamily: "San Francisco",
+    color: cGreyColor,
+    fontSize: 15,
+    fontWeight: FontWeight.w300);
+TextStyle formTextStyleOnBoarding = TextStyle(
+    fontFamily: "San Francisco",
+    color: cGreyColor,
+    fontSize: 16,
+    fontWeight: FontWeight.w400);
+TextStyle skipTextStyle = TextStyle(
+    fontFamily: "San Francisco",
+    color: cGreyColor,
+    fontSize: 15,
+    fontWeight: FontWeight.w400);
+TextStyle formErrorTextStyle = TextStyle(
+    fontFamily: "San Francisco",
+    color: cRedColor,
+    fontSize: 15,
+    fontWeight: FontWeight.w300);
+TextStyle onBoardingMainTextStyle = TextStyle(
+    fontFamily: "San Francisco",
+    color: cBlackColor,
+    fontSize: 20,
+    fontWeight: FontWeight.w700);
+TextStyle primaryColorTextStyle = TextStyle(
+    fontFamily: "San Francisco",
+    color: cPrimaryColor,
+    fontSize: 16,
+    fontWeight: FontWeight.w500);
+TextStyle primaryColorTextStyleSecond = TextStyle(
+    fontFamily: "San Francisco",
+    color: cPrimaryColor,
+    fontSize: 14,
+    fontWeight: FontWeight.w600);
+TextStyle cAlertDialogHeaderTextStyle = TextStyle(
+    fontFamily: "San Francisco",
+    color: cBlackColor,
+    fontSize: 17,
+    fontWeight: FontWeight.w700);
+TextStyle cAlertDialogButtonTextStyle = TextStyle(
+    fontFamily: "San Francisco",
+    color: cPrimaryColor,
+    fontSize: 15,
+    fontWeight: FontWeight.w600);
+TextStyle alertDialogHeaderTextStyle = TextStyle(
+    fontFamily: "San Francisco",
+    color: cBlackColor,
+    fontSize: 24,
+    fontWeight: FontWeight.w700);
+TextStyle alertDialogContentTextStyle = TextStyle(
+    fontFamily: "San Francisco",
+    color: cGreyColor,
+    fontSize: 16,
+    fontWeight: FontWeight.w400);
+TextStyle logInHeaderTextStyle = TextStyle(
+    fontFamily: "San Francisco",
+    color: cBlackColor,
+    fontSize: 28,
+    fontWeight: FontWeight.w700);
+TextStyle textStyle134 = TextStyle(
+    fontFamily: "San Francisco",
+    color: cGreyColor,
+    fontSize: 13,
+    fontWeight: FontWeight.w400);
+TextStyle textStyle136 = TextStyle(
+    fontFamily: "San Francisco",
+    color: cPrimaryColor,
+    fontSize: 13,
+    fontWeight: FontWeight.w600);
+TextStyle textStyle146 = TextStyle(
+    fontFamily: "San Francisco",
+    color: cPrimaryColor,
+    fontSize: 14,
+    fontWeight: FontWeight.w600);
+TextStyle textStyle144 = TextStyle(
+    fontFamily: "San Francisco",
+    color: cGreyColor,
+    fontSize: 14,
+    fontWeight: FontWeight.w400);
+TextStyle textStyle166 = TextStyle(
+    fontFamily: "San Francisco",
+    color: cBlackColor,
+    fontSize: 16,
+    fontWeight: FontWeight.w600);

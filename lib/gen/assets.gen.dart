@@ -146,6 +146,8 @@ class $AssetsFormImagesGen {
   /// File path: assets/form_images/user_type_icon.svg
   String get userTypeIcon => 'assets/form_images/user_type_icon.svg';
 
+  String get iosDownwardIcon => 'assets/form_images/ios_downward_icon.svg';
+
   /// List of all assets
   List<String> get values => [
         countryIcon,
@@ -154,7 +156,8 @@ class $AssetsFormImagesGen {
         passwordNonVisible,
         passwordVisible,
         userNameIcon,
-        userTypeIcon
+        userTypeIcon,
+        iosDownwardIcon
       ];
 }
 
