@@ -38,6 +38,8 @@ class $AssetsAccountGen {
   /// File path: assets/account/your_favourites_icon.svg
   String get yourFavouritesIcon => 'assets/account/your_favourites_icon.svg';
 
+  String get fosterParentIcon => 'assets/account/foster_parent_icon.svg';
+
   /// List of all assets
   List<String> get values => [
         changePasswordIcon,
@@ -47,7 +49,8 @@ class $AssetsAccountGen {
         notificationsIcon,
         questionMarkIcon,
         strategiesBookFrameIcon,
-        yourFavouritesIcon
+        yourFavouritesIcon,
+        fosterParentIcon
       ];
 }
 
@@ -101,9 +104,17 @@ class $AssetsCommonIconsGen {
   /// File path: assets/common_icons/star_icon_filled.svg
   String get starIconFilled => 'assets/common_icons/star_icon_filled.svg';
 
+  String get topicsFilter => 'assets/common_icons/topics_filter.png';
+
   /// List of all assets
-  List<String> get values =>
-      [filterIcon, heartIcon, searchIcon, starIconEmpty, starIconFilled];
+  List<String> get values => [
+        filterIcon,
+        heartIcon,
+        searchIcon,
+        starIconEmpty,
+        starIconFilled,
+        topicsFilter
+      ];
 }
 
 class $AssetsFavouritesGen {
@@ -199,6 +210,7 @@ class $AssetsStrategiesPersonImagesGen {
   /// File path: assets/strategies_person_images/strategies_heading_five.svg
   String get strategiesHeadingFiveLarge =>
       'assets/strategies_person_images/strategies_heading_five.png';
+
   String get strategiesHeadingFive =>
       'assets/strategies_person_images/strategies_heading_five_small.png';
 

@@ -7,6 +7,7 @@ import '../../../../../reusable_widgets/reusable_bottom_appbar.dart';
 import '../../../../../utils/text_styles/textstyles.dart';
 import '../../../favourites/view/favourites_view.dart';
 import '../../changePassword/view/change_password_enter_email_view.dart';
+import '../../language_selection/view/language_selection_view.dart';
 import '../components/user_account_components.dart';
 
 class UserAccountView extends StatelessWidget {
@@ -60,7 +61,9 @@ class UserAccountView extends StatelessWidget {
                         height: 10,
                       ),
                       OptionTileFourWidgets(
-                          onTapFunction: () {},
+                          onTapFunction: () {
+                            Get.to(() => const LanguageSelection());
+                          },
                           titleString: "Language",
                           selectedLanguage: "English",
                           leadingImageString: Assets.account.languageIcon),
@@ -79,7 +82,8 @@ class UserAccountView extends StatelessWidget {
                           onSwitchChanged: (val) {},
                           switchValue: false,
                           titleString: "Manage Subscription",
-                          leadingImageString: Assets.account.manageSubscriptionIcon),
+                          leadingImageString:
+                              Assets.account.manageSubscriptionIcon),
                       const SizedBox(
                         height: 10,
                       ),

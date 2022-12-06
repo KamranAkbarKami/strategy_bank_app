@@ -123,3 +123,35 @@ TextStyle textStyle164Black = TextStyle(
     color: cBlackColor,
     fontSize: 16,
     fontWeight: FontWeight.w400);
+TextStyle unselectedLanguageStyle = TextStyle(
+    fontFamily: "San Francisco",
+    color: cBlackColor,
+    fontSize: 15,
+    fontWeight: FontWeight.w300);
+TextStyle selectedLanguageStyle = TextStyle(
+    fontFamily: "San Francisco",
+    color: cWhiteColor,
+    fontSize: 15,
+    fontWeight: FontWeight.w700);
+TextStyle homePageDateTextStyle = TextStyle(
+    fontFamily: "San Francisco",
+    color: cGreyColor,
+    fontSize: 12,
+    fontWeight: FontWeight.w600);
+TextStyle homePageUserNameTextStyle = TextStyle(
+    fontFamily: "San Francisco",
+    color: cBlackColor,
+    fontSize: 20,
+    fontWeight: FontWeight.w700);
+TextStyle toggleTextStyle = TextStyle(
+    fontFamily: "San Francisco", fontSize: 12, fontWeight: FontWeight.w600);
+TextStyle textStyle166White = TextStyle(
+    fontFamily: "San Francisco",
+    color: cWhiteColor,
+    fontSize: 16,
+    fontWeight: FontWeight.w600);
+TextStyle textStyleDifficultyHeading = TextStyle(
+    fontFamily: "San Francisco",
+    color: cGreyColor,
+    fontSize: 14,
+    fontWeight: FontWeight.w300);

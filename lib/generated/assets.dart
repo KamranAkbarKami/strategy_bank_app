@@ -3,6 +3,7 @@ class Assets {
   Assets._();
 
   static const String accountChangePasswordIcon = 'assets/account/change_password_icon.svg';
+  static const String accountFosterParentIcon = 'assets/account/foster_parent_icon.svg';
   static const String accountLanguageIcon = 'assets/account/language_icon.svg';
   static const String accountLogOutIcon = 'assets/account/log_out_icon.svg';
   static const String accountManageSubscriptionIcon = 'assets/account/manage_subscription_icon.svg';
@@ -20,6 +21,7 @@ class Assets {
   static const String commonIconsSearchIcon = 'assets/common_icons/search_icon.svg';
   static const String commonIconsStarIconEmpty = 'assets/common_icons/star_icon_empty.svg';
   static const String commonIconsStarIconFilled = 'assets/common_icons/star_icon_filled.svg';
+  static const String commonIconsTopicsFilter = 'assets/common_icons/topics_filter.png';
   static const String favouritesDeleteFavouriteIcon = 'assets/favourites/delete_favourite_icon.svg';
   static const String favouritesFavouritesEmptyIcon = 'assets/favourites/favourites_empty_icon.svg';
   static const String favouritesSearchIcon = 'assets/favourites/search_icon.svg';

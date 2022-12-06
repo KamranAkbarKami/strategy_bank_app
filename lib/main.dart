@@ -28,8 +28,8 @@ class StrategyBankApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: cWhiteColor,
       ),
-      home: const OnBoardingScreen(),
-      // home: const SignInView(),
+      // home: const OnBoardingScreen(),
+      home: const SignInView(),
       // home: const ChangePasswordView(),
       // home: const PayWallScreen(),
       // home: const FavouritesView(),
