@@ -154,3 +154,39 @@ class HomePageAppBarCancel extends StatelessWidget
     );
   }
 }
+
+class StrategyAppbar extends StatelessWidget implements PreferredSizeWidget {
+  TextEditingController searchFieldController;
+
+  StrategyAppbar({Key? key, required this.searchFieldController})
+      : super(key: key);
+
+  @override
+  Size get preferredSize => const Size.fromHeight(70);
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+        title: SizedBox(
+            height: 50,
+            child: TStrategySearchField(
+                textEditingController: searchFieldController)),
+        titleTextStyle: onBoardingMainTextStyle,
+        iconTheme: const IconThemeData(),
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+        // backgroundColor: cWhiteColor,
+        elevation: 0,
+        leading: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const SizedBox(width: 20),
+            Flexible(
+              child: ReusableRoundBackButton(onPressFunction: () {
+                Get.back();
+              }),
+            ),
+          ],
+        ));
+  }
+}

@@ -169,10 +169,43 @@ class TSearchField extends StatelessWidget {
     );
   }
 }
-// (value) {
-// if (value!.isEmpty) {
-// return "User Name can not be Empty";
-// } else {
-// return null;
-// }
-// }
+
+class TStrategySearchField extends StatelessWidget {
+  TextEditingController textEditingController;
+
+  TStrategySearchField({
+    Key? key,
+    required this.textEditingController,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: textEditingController,
+      textAlignVertical: TextAlignVertical.center,
+      style: formTextStyle,
+      decoration: InputDecoration(
+        filled: true,
+        fillColor: cWhiteColor,
+        labelStyle: formTextStyle,
+        errorStyle: formErrorTextStyle,
+        hintText: "Search Behaviours",
+        contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+        border: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(50.0)),
+          borderSide: BorderSide(width: 0.2, color: cGreyColor),
+        ),
+        suffixIcon: Container(
+            height: 10,
+            width: 10,
+            decoration:
+                BoxDecoration(shape: BoxShape.circle, color: cGreyColor),
+            child: Icon(
+              Icons.close_rounded,
+              color: cWhiteColor,
+              size: 20,
+            )),
+      ),
+    );
+  }
+}
