@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:strategy_bank_app/reusable_widgets/reusableTextFields.dart';
 import 'package:strategy_bank_app/reusable_widgets/reusable_button.dart';
 import 'package:strategy_bank_app/reusable_widgets/reuseable_dropdown.dart';
-import 'package:strategy_bank_app/screens/auth/login/forgot_password/view/enter_email_view.dart';
 import 'package:strategy_bank_app/screens/auth/login/sign_in/view/sign_in_view.dart';
 import '../../../../../gen/assets.gen.dart';
 import '../../../../../utils/text_styles/textstyles.dart';
+import '../../../home/home_page/view/home_page_view.dart';
 import '../controller/registerViewController.dart';
 
 class RegistrationView extends StatelessWidget {
@@ -130,7 +130,7 @@ class RegistrationView extends StatelessWidget {
                               ),
                               ReusableButton(
                                   onPressFunction: () {
-                                    Get.offAll(() => const SignInView());
+                                    Get.offAll(() => const HomePageView());
                                   },
                                   stringText: "Create An Account"),
                               const SizedBox(
