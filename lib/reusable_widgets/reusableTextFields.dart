@@ -199,8 +199,8 @@ class TStrategySearchField extends StatelessWidget {
             height: 10,
             width: 10,
             decoration:
-                BoxDecoration(shape: BoxShape.circle, color: cGreyColor),
-            child: Icon(
+                const BoxDecoration(shape: BoxShape.circle, color: cGreyColor),
+            child: const Icon(
               Icons.close_rounded,
               color: cWhiteColor,
               size: 20,

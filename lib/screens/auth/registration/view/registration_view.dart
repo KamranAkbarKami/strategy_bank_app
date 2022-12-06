@@ -129,7 +129,9 @@ class RegistrationView extends StatelessWidget {
                                 height: 15,
                               ),
                               ReusableButton(
-                                  onPressFunction: () {},
+                                  onPressFunction: () {
+                                    Get.offAll(() => const SignInView());
+                                  },
                                   stringText: "Create An Account"),
                               const SizedBox(
                                 height: 30,

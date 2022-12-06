@@ -46,6 +46,9 @@ class Assets {
   static const String strategiesPersonImagesStrategiesHeadingSix = 'assets/strategies_person_images/strategies_heading_six.png';
   static const String strategiesPersonImagesStrategiesHeadingThree = 'assets/strategies_person_images/strategies_heading_three.png';
   static const String strategiesPersonImagesStrategiesHeadingTwo = 'assets/strategies_person_images/strategies_heading_two.png';
+  static const String userEmojiNeutral = 'assets/user/emoji_neutral.svg';
+  static const String userEmojiSad = 'assets/user/emoji_sad.svg';
+  static const String userEmojiSmiling = 'assets/user/emoji_smiling.svg';
   static const String userUserAccountImage = 'assets/user/user_account_image.png';
 
 }

@@ -155,3 +155,13 @@ TextStyle textStyleDifficultyHeading = TextStyle(
     color: cGreyColor,
     fontSize: 14,
     fontWeight: FontWeight.w300);
+TextStyle addStrategiesType = TextStyle(
+    fontFamily: "San Francisco",
+    color: cWhiteColor,
+    fontSize: 11,
+    fontWeight: FontWeight.w600);
+TextStyle addStrategiesDuration = TextStyle(
+    fontFamily: "San Francisco",
+    color: cGreyColor,
+    fontSize: 12,
+    fontWeight: FontWeight.w400);

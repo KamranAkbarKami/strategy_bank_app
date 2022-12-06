@@ -256,8 +256,15 @@ class $AssetsUserGen {
   /// File path: assets/user/user_account_image.svg
   String get userAccountImage => 'assets/user/user_account_image.png';
 
+  String get emojiNeutral => 'assets/user/emoji_neutral.svg';
+
+  String get emojiSad => 'assets/user/emoji_sad.svg';
+
+  String get emojiSmiling => 'assets/user/emoji_smiling.svg';
+
   /// List of all assets
-  List<String> get values => [userAccountImage];
+  List<String> get values =>
+      [userAccountImage, emojiNeutral, emojiSad, emojiSmiling];
 }
 
 class Assets {
