@@ -1,11 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:strategy_bank_app/reusable_widgets/reusableTextFields.dart';
 import 'package:strategy_bank_app/reusable_widgets/reusable_button.dart';
 import 'package:strategy_bank_app/screens/auth/login/forgot_password/view/choose_new_password_view.dart';
-import '../../../../../gen/assets.gen.dart';
-import '../../../../../reusable_widgets/reusable_alertDialog.dart';
 import '../../../../../utils/text_styles/textstyles.dart';
+import '../components/loginComponents.dart';
 import '../controller/forgotPasswordController.dart';
 
 class EnterOtpScreen extends StatelessWidget {
@@ -60,19 +60,11 @@ class EnterOtpScreen extends StatelessWidget {
                               const SizedBox(
                                 height: 25,
                               ),
-                              TCustomTextField(
-                                  validatorFunction: (value) {
-                                    if (value!.isEmpty) {
-                                      return "Email can not be Empty";
-                                    } else {
-                                      return null;
-                                    }
-                                  },
-                                  iconAssetName: Assets.formImages.emailIcon,
-                                  textEditingController:
-                                      forgotPasswordController.otpController,
-                                  hintText: "Enter Email",
-                                  labelText: "Email"),
+                              EnterOtpFieldComponent(onChangeFunction: (text) {
+                                log('Enter on change pin is $text'); // return the entered pin
+                              }, onSubmitFunction: (text) {
+                                log('Entered pin is $text'); // return the entered pin
+                              }),
                               const SizedBox(
                                 height: 15,
                               ),

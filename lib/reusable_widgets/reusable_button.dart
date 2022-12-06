@@ -72,6 +72,35 @@ class ReusableRoundBackButton extends StatelessWidget {
           child: Center(
             child: Icon(
               Icons.arrow_back_ios_rounded,
+              color: cPrimaryColor,
+              size: 20,
+            ),
+          ),
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: cWhiteAccentColorThree,
+          )),
+    );
+  }
+}
+
+class ReusableRoundAppBarBackButton extends StatelessWidget {
+  Function()? onPressFunction;
+
+  ReusableRoundAppBarBackButton({
+    required this.onPressFunction,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onPressFunction,
+      child: Container(
+          height: 30,
+          width: 30,
+          child: Center(
+            child: Icon(
+              Icons.arrow_back_ios_rounded,
               color: cWhiteColor,
               size: 20,
             ),

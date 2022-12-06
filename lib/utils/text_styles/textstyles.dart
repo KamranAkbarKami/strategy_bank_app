@@ -108,3 +108,18 @@ TextStyle textStyle166 = TextStyle(
     color: cBlackColor,
     fontSize: 16,
     fontWeight: FontWeight.w600);
+TextStyle textStyle146Grey = TextStyle(
+    fontFamily: "San Francisco",
+    color: cGreyColor,
+    fontSize: 14,
+    fontWeight: FontWeight.w600);
+TextStyle textStyle146Primary = TextStyle(
+    fontFamily: "San Francisco",
+    color: cPrimaryColor,
+    fontSize: 14,
+    fontWeight: FontWeight.w500);
+TextStyle textStyle164Black = TextStyle(
+    fontFamily: "San Francisco",
+    color: cBlackColor,
+    fontSize: 16,
+    fontWeight: FontWeight.w400);

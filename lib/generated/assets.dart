@@ -22,6 +22,7 @@ class Assets {
   static const String commonIconsStarIconFilled = 'assets/common_icons/star_icon_filled.svg';
   static const String favouritesDeleteFavouriteIcon = 'assets/favourites/delete_favourite_icon.svg';
   static const String favouritesFavouritesEmptyIcon = 'assets/favourites/favourites_empty_icon.svg';
+  static const String favouritesSearchIcon = 'assets/favourites/search_icon.svg';
   static const String formImagesCountryIcon = 'assets/form_images/country_icon.svg';
   static const String formImagesEmailIcon = 'assets/form_images/email_icon.svg';
   static const String formImagesIosDownwardIcon = 'assets/form_images/ios_downward_icon.svg';
@@ -34,13 +35,14 @@ class Assets {
   static const String onboardingImagesOnBoardingImageThree = 'assets/onboarding_images/onBoardingImageThree.svg';
   static const String onboardingImagesOnBoardingImageTwo = 'assets/onboarding_images/onBoardingImageTwo.svg';
   static const String paywallPaywallIcon = 'assets/paywall/paywall_icon.svg';
-  static const String strategiesPersonImagesStrategiesHeadingFive = 'assets/strategies_person_images/strategies_heading_five.svg';
-  static const String strategiesPersonImagesStrategiesHeadingFour = 'assets/strategies_person_images/strategies_heading_four.svg';
-  static const String strategiesPersonImagesStrategiesHeadingOne = 'assets/strategies_person_images/strategies_heading_one.svg';
-  static const String strategiesPersonImagesStrategiesHeadingSeven = 'assets/strategies_person_images/strategies_heading_seven.svg';
-  static const String strategiesPersonImagesStrategiesHeadingSix = 'assets/strategies_person_images/strategies_heading_six.svg';
-  static const String strategiesPersonImagesStrategiesHeadingThree = 'assets/strategies_person_images/strategies_heading_three.svg';
-  static const String strategiesPersonImagesStrategiesHeadingTwo = 'assets/strategies_person_images/strategies_heading_two.svg';
-  static const String userUserAccountImage = 'assets/user/user_account_image.svg';
+  static const String strategiesPersonImagesStrategiesHeadingFive = 'assets/strategies_person_images/strategies_heading_five.png';
+  static const String strategiesPersonImagesStrategiesHeadingFiveSmall = 'assets/strategies_person_images/strategies_heading_five_small.png';
+  static const String strategiesPersonImagesStrategiesHeadingFour = 'assets/strategies_person_images/strategies_heading_four.png';
+  static const String strategiesPersonImagesStrategiesHeadingOne = 'assets/strategies_person_images/strategies_heading_one.png';
+  static const String strategiesPersonImagesStrategiesHeadingSeven = 'assets/strategies_person_images/strategies_heading_seven.png';
+  static const String strategiesPersonImagesStrategiesHeadingSix = 'assets/strategies_person_images/strategies_heading_six.png';
+  static const String strategiesPersonImagesStrategiesHeadingThree = 'assets/strategies_person_images/strategies_heading_three.png';
+  static const String strategiesPersonImagesStrategiesHeadingTwo = 'assets/strategies_person_images/strategies_heading_two.png';
+  static const String userUserAccountImage = 'assets/user/user_account_image.png';
 
 }

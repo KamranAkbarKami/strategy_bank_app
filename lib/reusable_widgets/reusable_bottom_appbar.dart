@@ -6,10 +6,10 @@ import 'package:get/get.dart';
 import 'package:strategy_bank_app/screens/home/favourites/view/favourites_view.dart';
 import 'package:strategy_bank_app/screens/home/home_page/view/home_page_view.dart';
 import 'package:strategy_bank_app/screens/home/strategies/view/strategies_view.dart';
-import 'package:strategy_bank_app/screens/home/user_account/view/user_account_view.dart';
 import 'package:strategy_bank_app/utils/colors/colors.dart';
 
 import '../gen/assets.gen.dart';
+import '../screens/home/user_account/user_profile/view/user_account_view.dart';
 import '../utils/text_styles/textstyles.dart';
 
 class CustomBottomAppBar extends StatelessWidget {

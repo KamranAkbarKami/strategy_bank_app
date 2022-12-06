@@ -113,6 +113,8 @@ class $AssetsFavouritesGen {
   String get deleteFavouriteIcon =>
       'assets/favourites/delete_favourite_icon.svg';
 
+  String get searchIcon => 'assets/favourites/search_icon.svg';
+
   /// File path: assets/favourites/favourites_empty_icon.svg
   String get favouritesEmptyIcon =>
       'assets/favourites/favourites_empty_icon.svg';
@@ -195,32 +197,34 @@ class $AssetsStrategiesPersonImagesGen {
   const $AssetsStrategiesPersonImagesGen();
 
   /// File path: assets/strategies_person_images/strategies_heading_five.svg
+  String get strategiesHeadingFiveLarge =>
+      'assets/strategies_person_images/strategies_heading_five.png';
   String get strategiesHeadingFive =>
-      'assets/strategies_person_images/strategies_heading_five.svg';
+      'assets/strategies_person_images/strategies_heading_five_small.png';
 
   /// File path: assets/strategies_person_images/strategies_heading_four.svg
   String get strategiesHeadingFour =>
-      'assets/strategies_person_images/strategies_heading_four.svg';
+      'assets/strategies_person_images/strategies_heading_four.png';
 
   /// File path: assets/strategies_person_images/strategies_heading_one.svg
   String get strategiesHeadingOne =>
-      'assets/strategies_person_images/strategies_heading_one.svg';
+      'assets/strategies_person_images/strategies_heading_one.png';
 
   /// File path: assets/strategies_person_images/strategies_heading_seven.svg
   String get strategiesHeadingSeven =>
-      'assets/strategies_person_images/strategies_heading_seven.svg';
+      'assets/strategies_person_images/strategies_heading_seven.png';
 
   /// File path: assets/strategies_person_images/strategies_heading_six.svg
   String get strategiesHeadingSix =>
-      'assets/strategies_person_images/strategies_heading_six.svg';
+      'assets/strategies_person_images/strategies_heading_six.png';
 
   /// File path: assets/strategies_person_images/strategies_heading_three.svg
   String get strategiesHeadingThree =>
-      'assets/strategies_person_images/strategies_heading_three.svg';
+      'assets/strategies_person_images/strategies_heading_three.png';
 
   /// File path: assets/strategies_person_images/strategies_heading_two.svg
   String get strategiesHeadingTwo =>
-      'assets/strategies_person_images/strategies_heading_two.svg';
+      'assets/strategies_person_images/strategies_heading_two.png';
 
   /// List of all assets
   List<String> get values => [
@@ -238,7 +242,7 @@ class $AssetsUserGen {
   const $AssetsUserGen();
 
   /// File path: assets/user/user_account_image.svg
-  String get userAccountImage => 'assets/user/user_account_image.svg';
+  String get userAccountImage => 'assets/user/user_account_image.png';
 
   /// List of all assets
   List<String> get values => [userAccountImage];

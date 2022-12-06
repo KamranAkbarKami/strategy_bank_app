@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:strategy_bank_app/reusable_widgets/reusableTextFields.dart';
 import 'package:strategy_bank_app/reusable_widgets/reusable_button.dart';
 import 'package:strategy_bank_app/screens/auth/login/forgot_password/view/enter_email_view.dart';
+import 'package:strategy_bank_app/screens/home/home_page/view/home_page_view.dart';
 import '../../../../../gen/assets.gen.dart';
 import '../../../../../utils/colors/colors.dart';
 import '../../../../../utils/text_styles/textstyles.dart';
@@ -136,7 +137,10 @@ class SignInView extends StatelessWidget {
                               ),
                               const Spacer(),
                               ReusableButton(
-                                  onPressFunction: () {}, stringText: "Log In"),
+                                  onPressFunction: () {
+                                    Get.offAll(() => const HomePageView());
+                                  },
+                                  stringText: "Log In"),
                               const SizedBox(
                                 height: 30,
                               ),

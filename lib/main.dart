@@ -4,6 +4,10 @@ import 'package:get_storage/get_storage.dart';
 import 'package:strategy_bank_app/bindings/initializing_dependencies.dart';
 import 'package:strategy_bank_app/screens/auth/login/sign_in/view/sign_in_view.dart';
 import 'package:strategy_bank_app/screens/auth/on_boarding/view/on_boarding_screen.dart';
+import 'package:strategy_bank_app/screens/home/favourites/view/favourites_view.dart';
+import 'package:strategy_bank_app/screens/home/paywall/view/paywall_screen.dart';
+import 'package:strategy_bank_app/screens/home/user_account/changePassword/view/change_password_enter_email_view.dart';
+import 'package:strategy_bank_app/screens/home/user_account/user_profile/view/user_account_view.dart';
 import 'package:strategy_bank_app/utils/colors/colors.dart';
 
 main() async {
@@ -24,8 +28,12 @@ class StrategyBankApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: cWhiteColor,
       ),
-      // home: const OnBoardingScreen(),
-      home: const SignInView(),
+      home: const OnBoardingScreen(),
+      // home: const SignInView(),
+      // home: const ChangePasswordView(),
+      // home: const PayWallScreen(),
+      // home: const FavouritesView(),
+      // home: const UserAccountView(),
     );
   }
 }

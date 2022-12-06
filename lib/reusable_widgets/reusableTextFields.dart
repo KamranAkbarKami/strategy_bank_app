@@ -131,6 +131,44 @@ class TCustomTextField extends StatelessWidget {
     );
   }
 }
+
+class TSearchField extends StatelessWidget {
+  TextEditingController textEditingController;
+
+  TSearchField({
+    Key? key,
+    required this.textEditingController,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: textEditingController,
+      textAlignVertical: TextAlignVertical.center,
+      style: formTextStyle,
+      decoration: InputDecoration(
+        filled: true,
+        fillColor: cWhiteColor,
+        labelStyle: formTextStyle,
+        errorStyle: formErrorTextStyle,
+        hintText: "Search Behaviours",
+        border: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(50.0)),
+          borderSide: BorderSide(width: 0.2, color: cGreyColor),
+        ),
+        suffixIcon: Container(
+          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 12),
+          child: SvgPicture.asset(
+            Assets.favourites.searchIcon,
+            width: 20,
+            height: 20,
+            color: cPrimaryColor,
+          ),
+        ),
+      ),
+    );
+  }
+}
 // (value) {
 // if (value!.isEmpty) {
 // return "User Name can not be Empty";
