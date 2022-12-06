@@ -213,7 +213,12 @@ class OptionTileSwitchWidget extends StatelessWidget {
               width: 10,
             ),
             const Spacer(),
-            Switch(value: switchValue, onChanged: onSwitchChanged),
+            Switch(
+                thumbColor: MaterialStateProperty.all(cPrimaryColor),
+                activeColor: cWhiteColor,
+                inactiveTrackColor: cWhiteColor,
+                value: switchValue,
+                onChanged: onSwitchChanged),
           ],
         ),
       ),
