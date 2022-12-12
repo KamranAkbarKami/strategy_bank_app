@@ -20,6 +20,9 @@ class CheckEmailView extends StatelessWidget {
     Orientation mediaOrientation = MediaQuery.of(context).orientation;
     return Scaffold(
         appBar: ReusableAppBar(
+          onPressFunction: () {
+            Get.back();
+          },
           titleText: 'Change Password',
           showLeading: false,
         ),

@@ -17,7 +17,6 @@ class UserAccountView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size mediaSize = MediaQuery.of(context).size;
-    Orientation mediaOrientation = MediaQuery.of(context).orientation;
     return Scaffold(
         appBar: ReusableAppBarTwo(titleText: "Account"),
         bottomNavigationBar: CustomBottomAppBar(selectedIndex: 3),

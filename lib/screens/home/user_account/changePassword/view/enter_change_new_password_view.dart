@@ -22,6 +22,9 @@ class ChangeNewPasswordScreen extends StatelessWidget {
         appBar: ReusableAppBar(
           titleText: 'Password',
           showLeading: true,
+          onPressFunction: () {
+            Get.back();
+          },
         ),
         bottomNavigationBar: CustomBottomAppBar(selectedIndex: 3),
         body: GetBuilder<ChangePasswordController>(

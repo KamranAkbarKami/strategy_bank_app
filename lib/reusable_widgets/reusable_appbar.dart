@@ -12,8 +12,13 @@ import '../utils/text_styles/textstyles.dart';
 class ReusableAppBar extends StatelessWidget implements PreferredSizeWidget {
   String titleText;
   bool showLeading;
+  Function()? onPressFunction;
 
-  ReusableAppBar({Key? key, this.titleText = "", this.showLeading = true})
+  ReusableAppBar(
+      {Key? key,
+      this.titleText = "",
+      required this.onPressFunction,
+      this.showLeading = true})
       : super(key: key);
 
   @override
@@ -27,7 +32,6 @@ class ReusableAppBar extends StatelessWidget implements PreferredSizeWidget {
       iconTheme: const IconThemeData(),
       centerTitle: true,
       backgroundColor: Colors.transparent,
-      // backgroundColor: cWhiteColor,
       elevation: 0,
       leadingWidth: 100,
 
@@ -37,9 +41,8 @@ class ReusableAppBar extends StatelessWidget implements PreferredSizeWidget {
               children: [
                 const SizedBox(width: 20),
                 Flexible(
-                  child: ReusableRoundBackButton(onPressFunction: () {
-                    Get.back();
-                  }),
+                  child:
+                      ReusableRoundBackButton(onPressFunction: onPressFunction),
                 ),
               ],
             )

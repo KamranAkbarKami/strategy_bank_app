@@ -3,19 +3,15 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:strategy_bank_app/models/strategiesModel.dart';
-import 'package:toggle_switch/toggle_switch.dart';
-import 'package:strategy_bank_app/reusable_widgets/reusableTextFields.dart';
-import 'package:strategy_bank_app/screens/home/home_page/controller/home_page_controller.dart';
-import 'package:strategy_bank_app/utils/colors/colors.dart';
 
 import '../../../../gen/assets.gen.dart';
+import '../../../../models/strategiesModel.dart';
 import '../../../../reusable_widgets/reusable_appbar.dart';
 import '../../../../reusable_widgets/reusable_bottom_appbar.dart';
 import '../../../../utils/text_styles/textstyles.dart';
 import '../components/home_page_components.dart';
+import '../controller/home_page_controller.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({Key? key}) : super(key: key);
@@ -59,9 +55,17 @@ class HomePageView extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    ToggleButtonComponent(
-                      toggleSwitchFunction: (index) {},
-                    ),
+                    ToggleHomeScreenComponent(
+                        selectedIndex: homePageController.selectedIndex,
+                        discoverToggleFunction: () {
+                          homePageController.toggleDiscover();
+                        },
+                        favouritesToggleFunction: () {
+                          homePageController.toggleFavourites();
+                        },
+                        popularToggleFunction: () {
+                          homePageController.togglePopular();
+                        }),
                     SizedBox(
                       height: 20,
                     ),
@@ -78,6 +82,13 @@ class HomePageView extends StatelessWidget {
                           ),
                           itemBuilder: (BuildContext context, int index) {
                             return HomepageContentWidget(
+                              favouriteFunction: () {
+                                homePageController.selectOrUnselectFavourite(
+                                    strategiesIndex: index);
+                              },
+                              favouriteStrategyList:
+                                  homePageController.favouritesStrategiesList,
+                              strategyIndex: index,
                               strategiesModel: strategiesList.elementAt(index),
                               difficulty: "Anxiety",
                               onTapFunction: () {},
@@ -96,10 +107,13 @@ class HomePageView extends StatelessWidget {
                           "Topics",
                           style: homePageUserNameTextStyle,
                         ),
-                        Image.asset(
-                          Assets.commonIcons.topicsFilter,
-                          height: 24,
-                          width: 24,
+                        InkWell(
+                          onTap: () {},
+                          child: Image.asset(
+                            Assets.commonIcons.topicsFilter,
+                            height: 24,
+                            width: 24,
+                          ),
                         ),
                       ],
                     ),

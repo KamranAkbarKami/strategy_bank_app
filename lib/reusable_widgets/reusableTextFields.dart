@@ -145,8 +145,10 @@ class TSearchField extends StatelessWidget {
     return TextFormField(
       controller: textEditingController,
       textAlignVertical: TextAlignVertical.center,
+      textAlign: TextAlign.left,
       style: formTextStyle,
       decoration: InputDecoration(
+        contentPadding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
         filled: true,
         fillColor: cWhiteColor,
         labelStyle: formTextStyle,
@@ -157,7 +159,7 @@ class TSearchField extends StatelessWidget {
           borderSide: BorderSide(width: 0.2, color: cGreyColor),
         ),
         suffixIcon: Container(
-          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 12),
+          padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 14),
           child: SvgPicture.asset(
             Assets.favourites.searchIcon,
             width: 20,

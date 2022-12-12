@@ -25,6 +25,9 @@ class ChangePasswordView extends StatelessWidget {
     return Scaffold(
       appBar: ReusableAppBar(
         titleText: 'Change Password',
+        onPressFunction: () {
+          Get.back();
+        },
       ),
       bottomNavigationBar: CustomBottomAppBar(selectedIndex: 3),
       body: GetBuilder<ChangePasswordController>(

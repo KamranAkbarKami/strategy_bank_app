@@ -21,6 +21,9 @@ class ArticleStrategies extends StatelessWidget {
       builder: (articleStrategiesController) {
         return Scaffold(
           appBar: ReusableAppBar(
+              onPressFunction: () {
+                Get.back();
+              },
               titleText: articleStrategiesController.selectedIndex == 0
                   ? "Strategies"
                   : "Review"),

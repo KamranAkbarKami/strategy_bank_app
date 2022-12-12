@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:toggle_switch/toggle_switch.dart';
-
 import '../../../../../gen/assets.gen.dart';
 import '../../../../../models/strategiesModel.dart';
 import '../../../../../utils/colors/colors.dart';

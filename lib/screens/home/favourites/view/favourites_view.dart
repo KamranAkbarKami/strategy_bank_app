@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:strategy_bank_app/reusable_widgets/reusableTextFields.dart';
-import 'package:strategy_bank_app/utils/colors/colors.dart';
-
-import '../../../../../gen/assets.gen.dart';
+import 'package:strategy_bank_app/screens/home/home_page/view/home_page_view.dart';
+import 'package:strategy_bank_app/screens/home/strategies/view/strategies_view.dart';
 import '../../../../../reusable_widgets/reusable_appbar.dart';
 import '../../../../../reusable_widgets/reusable_bottom_appbar.dart';
 import '../../../../../reusable_widgets/reusable_button.dart';
-import '../../../../../utils/text_styles/textstyles.dart';
-import '../../../../models/strategiesModel.dart';
 import '../components/favourites_view_components.dart';
 import '../controller/favourites_view_controller.dart';
 
@@ -24,6 +20,9 @@ class FavouritesView extends StatelessWidget {
         appBar: ReusableAppBar(
           titleText: 'My Favourites',
           showLeading: true,
+          onPressFunction: () {
+            Get.offAll(() => const HomePageView());
+          },
         ),
         bottomNavigationBar: CustomBottomAppBar(selectedIndex: 2),
         body: GetBuilder<FavouritesViewController>(
@@ -101,7 +100,9 @@ class FavouritesView extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           ReusableButton(
-                              onPressFunction: () {},
+                              onPressFunction: () {
+                                Get.offAll(() => const StrategiesView());
+                              },
                               stringText: "Explore Strategies"),
                           mediaOrientation == Orientation.portrait
                               ? const SizedBox(

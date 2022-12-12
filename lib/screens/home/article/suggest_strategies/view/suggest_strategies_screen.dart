@@ -18,7 +18,12 @@ class SuggestStrategyController extends StatelessWidget {
     Size mediaSize = MediaQuery.of(context).size;
     Orientation mediaOrientation = MediaQuery.of(context).orientation;
     return Scaffold(
-        appBar: ReusableAppBar(titleText: "Suggest a Strategy"),
+        appBar: ReusableAppBar(
+          titleText: "Suggest a Strategy",
+          onPressFunction: () {
+            Get.back();
+          },
+        ),
         bottomNavigationBar: CustomBottomAppBar(selectedIndex: 3),
         body: GetBuilder<SuggestStrategiesController>(
             init: SuggestStrategiesController(),

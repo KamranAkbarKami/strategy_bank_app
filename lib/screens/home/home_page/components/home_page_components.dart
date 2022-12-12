@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:toggle_switch/toggle_switch.dart';
 
 import '../../../../gen/assets.gen.dart';
 import '../../../../models/strategiesModel.dart';
 import '../../../../utils/colors/colors.dart';
 import '../../../../utils/text_styles/textstyles.dart';
 
-class ToggleButtonComponent extends StatelessWidget {
-  Function(int?)? toggleSwitchFunction;
+class ToggleHomeScreenComponent extends StatelessWidget {
+  Function()? discoverToggleFunction,
+      favouritesToggleFunction,
+      popularToggleFunction;
+  int selectedIndex;
 
-  ToggleButtonComponent({Key? key, required this.toggleSwitchFunction})
-      : super(key: key);
+  ToggleHomeScreenComponent({
+    Key? key,
+    required this.discoverToggleFunction,
+    required this.favouritesToggleFunction,
+    required this.popularToggleFunction,
+    required this.selectedIndex,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,31 +29,77 @@ class ToggleButtonComponent extends StatelessWidget {
       height: 60,
       width: mediaSize.width,
       alignment: Alignment.center,
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       decoration: BoxDecoration(
           color: cWhiteAccentColorThree,
           borderRadius: BorderRadius.circular(60)),
-      child: ToggleSwitch(
-        cornerRadius: 60.0,
-        activeBgColors: const [
-          [cPrimaryColor],
-          [cPrimaryColor],
-          [cPrimaryColor],
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Expanded(
+              child: GestureDetector(
+            onTap: discoverToggleFunction,
+            child: Container(
+              height: 60,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  color: selectedIndex == 0
+                      ? cPrimaryColor
+                      : cWhiteAccentColorThree,
+                  borderRadius: BorderRadius.circular(60)),
+              child: Text(
+                "Discover",
+                style: TextStyle(
+                    fontFamily: "San Francisco",
+                    color: selectedIndex == 0 ? cWhiteColor : cBlackColor,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600),
+              ),
+            ),
+          )),
+          Expanded(
+              child: GestureDetector(
+            onTap: favouritesToggleFunction,
+            child: Container(
+              height: 60,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  color: selectedIndex == 1
+                      ? cPrimaryColor
+                      : cWhiteAccentColorThree,
+                  borderRadius: BorderRadius.circular(60)),
+              child: Text(
+                "Favourites",
+                style: TextStyle(
+                    fontFamily: "San Francisco",
+                    color: selectedIndex == 1 ? cWhiteColor : cBlackColor,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600),
+              ),
+            ),
+          )),
+          Expanded(
+              child: GestureDetector(
+            onTap: popularToggleFunction,
+            child: Container(
+              height: 60,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  color: selectedIndex == 2
+                      ? cPrimaryColor
+                      : cWhiteAccentColorThree,
+                  borderRadius: BorderRadius.circular(60)),
+              child: Text(
+                "Popular",
+                style: TextStyle(
+                    fontFamily: "San Francisco",
+                    color: selectedIndex == 2 ? cWhiteColor : cBlackColor,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600),
+              ),
+            ),
+          )),
         ],
-        customWidths: [
-          mediaSize.width * 0.28,
-          mediaSize.width * 0.28,
-          mediaSize.width * 0.28,
-        ],
-        activeFgColor: Colors.white,
-        inactiveBgColor: cWhiteAccentColorThree,
-        inactiveFgColor: cBlackColor,
-        initialLabelIndex: 0,
-        totalSwitches: 3,
-        customTextStyles: [toggleTextStyle, toggleTextStyle, toggleTextStyle],
-        labels: const ['Discover', 'Favourites', 'Popular'],
-        radiusStyle: true,
-        onToggle: toggleSwitchFunction,
       ),
     );
   }
@@ -86,13 +139,18 @@ class TopicsComponent extends StatelessWidget {
 
 class HomepageContentWidget extends StatelessWidget {
   StrategiesModel strategiesModel;
-  Function()? onTapFunction;
+  Function()? onTapFunction, favouriteFunction;
   String difficulty;
+  List<int> favouriteStrategyList;
+  int strategyIndex;
 
   HomepageContentWidget(
       {Key? key,
       required this.strategiesModel,
+      required this.favouriteStrategyList,
       required this.onTapFunction,
+      required this.favouriteFunction,
+      required this.strategyIndex,
       required this.difficulty})
       : super(key: key);
 
@@ -124,17 +182,22 @@ class HomepageContentWidget extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       image: DecorationImage(
                           image: AssetImage(strategiesModel.articleImage),
-                          fit: BoxFit.fill)),
-                  child: Container(
-                    height: 30,
-                    width: 30,
-                    padding: const EdgeInsets.all(2),
-                    alignment: Alignment.center,
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: cWhiteColor),
-                    child: SvgPicture.asset(
-                      Assets.commonIcons.heartIcon,
-                      color: cPrimaryColor,
+                          fit: BoxFit.cover)),
+                  child: InkWell(
+                    onTap: favouriteFunction,
+                    child: Container(
+                      height: 30,
+                      width: 30,
+                      padding: const EdgeInsets.all(2),
+                      alignment: Alignment.center,
+                      decoration: const BoxDecoration(
+                          shape: BoxShape.circle, color: cWhiteColor),
+                      child: Icon(
+                        favouriteStrategyList.contains(strategyIndex)
+                            ? Icons.favorite_rounded
+                            : Icons.favorite_border_rounded,
+                        color: cPrimaryColor,
+                      ),
                     ),
                   ),
                 )),

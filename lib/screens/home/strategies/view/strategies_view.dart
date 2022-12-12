@@ -1,13 +1,8 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:strategy_bank_app/models/strategiesModel.dart';
-
 import '../../../../reusable_widgets/reusable_appbar.dart';
-import '../../../../reusable_widgets/reusable_bottom_appbar.dart';
 import '../controller/strategies_controller.dart';
 
 class StrategiesView extends StatelessWidget {
@@ -34,7 +29,7 @@ class StrategiesView extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
+                  children: const <Widget>[
                     // Flexible(
                     //     child: ListView.separated(
                     //         physics: const NeverScrollableScrollPhysics(),
@@ -54,7 +49,7 @@ class StrategiesView extends StatelessWidget {
                     //             },
                     //           );
                     //         })),
-                    const SizedBox(
+                    SizedBox(
                       height: 125,
                     ),
                   ],
