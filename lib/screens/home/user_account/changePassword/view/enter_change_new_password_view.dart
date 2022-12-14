@@ -20,11 +20,11 @@ class ChangeNewPasswordScreen extends StatelessWidget {
     Orientation mediaOrientation = MediaQuery.of(context).orientation;
     return Scaffold(
         appBar: ReusableAppBar(
-          titleText: 'Password',
-          showLeading: true,
           onPressFunction: () {
             Get.back();
           },
+          titleText: 'Password',
+          showLeading: true,
         ),
         bottomNavigationBar: CustomBottomAppBar(selectedIndex: 3),
         body: GetBuilder<ChangePasswordController>(

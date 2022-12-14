@@ -92,6 +92,10 @@ class $AssetsCommonIconsGen {
   /// File path: assets/common_icons/filter_icon.svg
   String get filterIcon => 'assets/common_icons/filter_icon.svg';
 
+  String get arrowUp => 'assets/common_icons/arrow_up.svg';
+
+  String get arrowDown => 'assets/common_icons/arrow_down.svg';
+
   /// File path: assets/common_icons/heart_icon.svg
   String get heartIcon => 'assets/common_icons/heart_icon.svg';
 
@@ -108,6 +112,8 @@ class $AssetsCommonIconsGen {
 
   /// List of all assets
   List<String> get values => [
+        arrowUp,
+        arrowDown,
         filterIcon,
         heartIcon,
         searchIcon,

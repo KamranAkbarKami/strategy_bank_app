@@ -10,14 +10,15 @@ import '../component/article_strategies_components.dart';
 import '../controller/article_strategies_controller.dart';
 
 class ArticleStrategies extends StatelessWidget {
-  const ArticleStrategies({Key? key}) : super(key: key);
+  int toggleIndex;
+  ArticleStrategies({Key? key, this.toggleIndex=0}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Size mediaSize = MediaQuery.of(context).size;
     Orientation mediaOrientation = MediaQuery.of(context).orientation;
     return GetBuilder<ArticleStrategiesController>(
-      init: ArticleStrategiesController(),
+      init: ArticleStrategiesController(selectedIndex: toggleIndex),
       builder: (articleStrategiesController) {
         return Scaffold(
           appBar: ReusableAppBar(

@@ -148,7 +148,8 @@ class TSearchField extends StatelessWidget {
       textAlign: TextAlign.left,
       style: formTextStyle,
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         filled: true,
         fillColor: cWhiteColor,
         labelStyle: formTextStyle,
@@ -174,10 +175,13 @@ class TSearchField extends StatelessWidget {
 
 class TStrategySearchField extends StatelessWidget {
   TextEditingController textEditingController;
-
+  Function() cutAllTextFunction;
+  Function(String)? onChangeFunction;
   TStrategySearchField({
     Key? key,
+    required this.cutAllTextFunction,
     required this.textEditingController,
+    required this.onChangeFunction,
   }) : super(key: key);
 
   @override
@@ -197,17 +201,24 @@ class TStrategySearchField extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(50.0)),
           borderSide: BorderSide(width: 0.2, color: cGreyColor),
         ),
-        suffixIcon: Container(
-            height: 10,
-            width: 10,
-            decoration:
-                const BoxDecoration(shape: BoxShape.circle, color: cGreyColor),
-            child: const Icon(
-              Icons.close_rounded,
-              color: cWhiteColor,
-              size: 20,
-            )),
+        suffixIcon: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Container(
+              height: 10,
+              width: 10,
+              decoration: const BoxDecoration(
+                  shape: BoxShape.circle, color: cGreyColor),
+              child: InkWell(
+                onTap: cutAllTextFunction,
+                child: const Icon(
+                  Icons.close_rounded,
+                  color: cWhiteColor,
+                  size: 20,
+                ),
+              )),
+        ),
       ),
+      onChanged: onChangeFunction,
     );
   }
 }

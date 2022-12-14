@@ -14,11 +14,10 @@ class LanguageSelection extends StatelessWidget {
     Orientation mediaOrientation = MediaQuery.of(context).orientation;
     return Scaffold(
         appBar: ReusableAppBar(
-          titleText: "Language",
-          onPressFunction: () {
-            Get.back();
-          },
-        ),
+            onPressFunction: () {
+              Get.back();
+            },
+            titleText: "Language"),
         body: GetBuilder<LanguageController>(
           init: LanguageController(),
           builder: (languageController) {

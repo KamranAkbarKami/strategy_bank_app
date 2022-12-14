@@ -16,6 +16,8 @@ class Assets {
   static const String bottomAppBarSvgImagesHomeIcon = 'assets/bottom_app_bar_svg_images/home_icon.svg';
   static const String bottomAppBarSvgImagesStrategies = 'assets/bottom_app_bar_svg_images/strategies.svg';
   static const String changePasswordChangePasswordEmailIcon = 'assets/change_password/change_password_email_icon.svg';
+  static const String commonIconsArrowDown = 'assets/common_icons/arrow_down.svg';
+  static const String commonIconsArrowUp = 'assets/common_icons/arrow_up.svg';
   static const String commonIconsCrossIcon = 'assets/common_icons/crossIcon.svg';
   static const String commonIconsFilterIcon = 'assets/common_icons/filter_icon.svg';
   static const String commonIconsHeartIcon = 'assets/common_icons/heart_icon.svg';

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const cPrimaryColor = Color(0xFF46A09D);
+Color cPrimaryColorWithOpacity = const Color(0xFF46A09D).withOpacity(0.2);
 const cShadowColor = Color(0x7346A09D);
 const cSecondColor = Color(0xFFAEB6D3);
 const cGreyColor = Color(0xFF616161);

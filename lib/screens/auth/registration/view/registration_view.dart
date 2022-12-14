@@ -6,6 +6,7 @@ import 'package:strategy_bank_app/reusable_widgets/reuseable_dropdown.dart';
 import 'package:strategy_bank_app/screens/auth/login/sign_in/view/sign_in_view.dart';
 import '../../../../../gen/assets.gen.dart';
 import '../../../../../utils/text_styles/textstyles.dart';
+import '../../../../reusable_widgets/country_drop_down_widget.dart';
 import '../../../home/home_page/view/home_page_view.dart';
 import '../controller/registerViewController.dart';
 
@@ -114,7 +115,7 @@ class RegistrationView extends StatelessWidget {
                               const SizedBox(
                                 height: 10,
                               ),
-                              DCustomDropDownWithIcon(
+                              CountryDropDownWithIcon(
                                   prefixIconString:
                                       Assets.formImages.countryIcon,
                                   hintString: "Country"),

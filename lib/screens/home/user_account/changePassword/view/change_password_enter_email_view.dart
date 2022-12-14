@@ -24,10 +24,10 @@ class ChangePasswordView extends StatelessWidget {
     Orientation mediaOrientation = MediaQuery.of(context).orientation;
     return Scaffold(
       appBar: ReusableAppBar(
-        titleText: 'Change Password',
         onPressFunction: () {
           Get.back();
         },
+        titleText: 'Change Password',
       ),
       bottomNavigationBar: CustomBottomAppBar(selectedIndex: 3),
       body: GetBuilder<ChangePasswordController>(

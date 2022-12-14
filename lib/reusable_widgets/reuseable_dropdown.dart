@@ -37,7 +37,7 @@ class _DCustomDropdownState extends State<DCustomDropdown> {
       decoration: BoxDecoration(
           color: cWhiteAccentColorThree,
           borderRadius: BorderRadius.circular(10)),
-      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+      padding:  EdgeInsets.symmetric(vertical: 5, horizontal: 10),
       child: DropdownButton<String>(
         value: widget.index == 0 ? dropdownValue : dropdownValueTwo,
         dropdownColor: cWhiteAccentColorThree,
@@ -79,6 +79,7 @@ class _DCustomDropdownState extends State<DCustomDropdown> {
 class DCustomDropDownWithIcon extends StatefulWidget {
   String prefixIconString, hintString;
 
+
   DCustomDropDownWithIcon(
       {Key? key, required this.prefixIconString, required this.hintString})
       : super(key: key);
@@ -93,6 +94,11 @@ class _DCustomDropDownWithIconState extends State<DCustomDropDownWithIcon> {
   Widget build(BuildContext context) {
     return DropdownButtonFormField<String>(
       iconSize: 0,
+      isExpanded: true,
+      // menuMaxHeight: 300,
+      // isDense: true,
+      //please run ok not working
+      alignment: Alignment.bottomCenter,
       decoration: InputDecoration(
         filled: true,
         fillColor: cWhiteAccentColorThree,
@@ -113,10 +119,11 @@ class _DCustomDropDownWithIconState extends State<DCustomDropDownWithIcon> {
               Assets.formImages.iosDownwardIcon,
             )),
       ),
+
       dropdownColor: cWhiteAccentColorThree,
       style: formTextStyle,
       hint: Text(widget.hintString),
-      items: <String>['A', 'B', 'C', 'D'].map((String value) {
+      items: <String>['Parent', 'Foster Parent', 'Teacher', 'Social Worker'].map((String value) {
         return DropdownMenuItem<String>(
           value: value,
           child: Text(value),
@@ -126,3 +133,4 @@ class _DCustomDropDownWithIconState extends State<DCustomDropDownWithIcon> {
     );
   }
 }
+

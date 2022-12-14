@@ -10,6 +10,7 @@ import '../../../../models/strategiesModel.dart';
 import '../../../../reusable_widgets/reusable_appbar.dart';
 import '../../../../reusable_widgets/reusable_bottom_appbar.dart';
 import '../../../../utils/text_styles/textstyles.dart';
+import '../../strategies/view/articallFilter.dart';
 import '../components/home_page_components.dart';
 import '../controller/home_page_controller.dart';
 
@@ -108,7 +109,9 @@ class HomePageView extends StatelessWidget {
                           style: homePageUserNameTextStyle,
                         ),
                         InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Get.to(() => ArticlesFilterScreen());
+                          },
                           child: Image.asset(
                             Assets.commonIcons.topicsFilter,
                             height: 24,
