@@ -13,8 +13,7 @@ import '../../../../../reusable_widgets/reusable_bottom_appbar.dart';
 import '../../../../../reusable_widgets/reusable_button.dart';
 import '../../../../../utils/text_styles/textstyles.dart';
 import '../../../../auth/login/forgot_password/view/enter_email_view.dart';
-import '../components/change_password_controller.dart';
-
+import '../controller/change_password_controller.dart';
 class ChangePasswordView extends StatelessWidget {
   const ChangePasswordView({Key? key}) : super(key: key);
 

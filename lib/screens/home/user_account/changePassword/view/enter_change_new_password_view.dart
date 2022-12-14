@@ -9,7 +9,7 @@ import '../../../../../gen/assets.gen.dart';
 import '../../../../../reusable_widgets/reusable_appbar.dart';
 import '../../../../../reusable_widgets/reusable_bottom_appbar.dart';
 import '../../../../../utils/text_styles/textstyles.dart';
-import '../components/change_password_controller.dart';
+import '../controller/change_password_controller.dart';
 
 class ChangeNewPasswordScreen extends StatelessWidget {
   const ChangeNewPasswordScreen({Key? key}) : super(key: key);
