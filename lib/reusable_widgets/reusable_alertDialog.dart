@@ -74,9 +74,11 @@ class CustomAlertDialog extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Text(
-                headerText,
-                style: alertDialogHeaderTextStyle,
+              FittedBox(
+                child: Text(
+                  headerText,
+                  style: alertDialogHeaderTextStyle,
+                ),
               ),
               Text(
                 contentText,

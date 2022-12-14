@@ -358,87 +358,72 @@ class StrategiesView extends StatelessWidget {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
-                                            Expanded(
-                                              flex: 2,
-                                              child: RichText(
-                                                overflow: TextOverflow.clip,
-                                                strutStyle:
-                                                    StrutStyle(fontSize: 12.0),
-                                                text: TextSpan(
-                                                  style: TextStyle(
-                                                      color: cBlackColor,
-                                                      fontSize: 16,
-                                                      fontWeight:
-                                                          FontWeight.w600),
-                                                  text: strategiesList[index]
-                                                      .articleTitle,
-                                                ),
-                                              ),
+                                            Text(
+                                              strategiesList[index]
+                                                  .articleTitle,
+                                              style: TextStyle(
+                                                  color: cBlackColor,
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.w600),
                                             ),
                                             SizedBox(
                                               height: 5,
                                             ),
-                                            Flexible(
-                                              child: RichText(
-                                                overflow: TextOverflow.ellipsis,
-                                                strutStyle:
-                                                    StrutStyle(fontSize: 12.0),
-                                                text: TextSpan(
+                                            RichText(
+                                              overflow: TextOverflow.ellipsis,
+                                              strutStyle:
+                                                  StrutStyle(fontSize: 12.0),
+                                              text: TextSpan(
+                                                style: TextStyle(
+                                                    color: cBlackColor,
+                                                    fontSize: 13,
+                                                    fontWeight:
+                                                        FontWeight.w400),
+                                                text: strategiesList[index]
+                                                    .articleDescription,
+                                              ),
+                                            ),
+                                            Spacer(),
+                                            Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.end,
+                                              children: [
+                                                Text(
+                                                  "4.5",
                                                   style: TextStyle(
-                                                      color: cBlackColor,
-                                                      fontSize: 13,
+                                                      fontSize: 16,
                                                       fontWeight:
-                                                          FontWeight.w400),
-                                                  text: strategiesList[index]
-                                                      .articleDescription,
+                                                          FontWeight.w600),
                                                 ),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 10,
-                                            ),
-                                            Flexible(
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.min,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.end,
-                                                children: [
-                                                  Text(
-                                                    "4.5",
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                SvgPicture.asset(
+                                                  Assets.commonIcons
+                                                      .starIconFilled,
+                                                ),
+                                                SizedBox(
+                                                  width: 15,
+                                                ),
+                                                Container(
+                                                  height: 30,
+                                                  padding: EdgeInsets.symmetric(
+                                                      horizontal: 10),
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.black,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20),
+                                                  ),
+                                                  alignment: Alignment.center,
+                                                  child: Text(
+                                                    "Trauma",
                                                     style: TextStyle(
-                                                        fontSize: 16,
-                                                        fontWeight:
-                                                            FontWeight.w600),
+                                                        color: Colors.white),
                                                   ),
-                                                  SizedBox(
-                                                    width: 5,
-                                                  ),
-                                                  SvgPicture.asset(
-                                                    Assets.commonIcons
-                                                        .starIconFilled,
-                                                  ),
-                                                  SizedBox(
-                                                    width: 15,
-                                                  ),
-                                                  Container(
-                                                    padding:
-                                                        EdgeInsets.symmetric(
-                                                            horizontal: 10),
-                                                    decoration: BoxDecoration(
-                                                      color: Colors.black,
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              20),
-                                                    ),
-                                                    alignment: Alignment.center,
-                                                    child: Text(
-                                                      "Trauma",
-                                                      style: TextStyle(
-                                                          color: Colors.white),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
                                           ],
                                         ),
